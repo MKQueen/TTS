@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语音合成</title>
+</head>
+<body>
+<script>
+    function reader(){
+        let words = "你好"
+        let url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&text=" + encodeURI(words);
+        let n = new Audio(url);
+        n.src = url;
+        n.play();  //播放阅读
+        //n.cancel();  //取消阅读
+        //n.pause();  //暂停阅读
+    }
+    reader()
+</script>
+</body>
+</html>
